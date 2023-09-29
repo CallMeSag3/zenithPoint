@@ -5,7 +5,7 @@ export default function Map() {
     return (
         <div className="map">
             <div className="map__container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15907.047736221411!2d-74.06525015!3d4.6365086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sco!4v1691619573321!5m2!1sru!2sco" width="800" height="600" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="map__start"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15907.047736221411!2d-74.06525015!3d4.6365086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sco!4v1691619573321!5m2!1sru!2sco" width="800" height="600" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="map__start"></iframe>
             </div>
         </div>
     )

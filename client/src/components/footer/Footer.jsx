@@ -36,7 +36,7 @@ export default function Footer() {
                         <h3 className="footer__about-title">Compañia</h3>
                         <ul className="footer__about-list">
                             <li className="footer__about-item">
-                                <Link to="/" className="footer__about-link">Sobre nosotros</Link>
+                                <Link to="/about" className="footer__about-link">Sobre nosotros</Link>
                             </li>
                             <li className="footer__about-item">
                                 <Link to="/" className="footer__about-link">Nuestra historia</Link>

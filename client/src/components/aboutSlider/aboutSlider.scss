@@ -1,0 +1,95 @@
+.about-slider {
+    margin-bottom: 60px;
+    margin-top: 30px;
+    &__title {
+        font-family: "Inter", sans-serif;
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 88px;
+        background: -webkit-linear-gradient(90deg, #005C94 0%, #0079FF 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    &__slider {
+        margin: 0 102px;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        left: 50%;
+        transform: translateX(-55%);
+        &-item {
+            width: 33%;
+            position: relative;
+            &:hover {
+                & > .about-slider__slider-info {
+                    opacity: 100;
+            }
+                & > .about-slider__slider-img {
+                    filter: blur(3px);;
+                }
+            }
+        }
+        &-img {
+            width: 300px;
+            transition: all 0.2s ease-in;
+        }
+        &-info {
+            opacity: 0;
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            transition: all 0.2s ease-in;
+            &-name {
+                color: #000;
+                font-family: "Nunito", sans-serif;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin-bottom: 10px;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background: #000;
+                    margin-top: 0px;
+                }
+            }
+            &-role {
+                color: #000;
+                font-family: "Inter", sans-serif;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+    }
+}
+
+.slick-dots li button:before {
+    background-color: #D9D9D9;
+    height: 27px !important;
+    width: 27px !important;
+    text-indent: -9999px;
+    overflow:hidden;
+    border-radius: 50%;
+    transform: translateX(-220%) !important;
+    }
+
+.slick-dots li {
+    &.slick-active button:before {
+        background-color: #777;
+    }
+}
+
+.slick-dots li  {
+    margin-right: 22px !important;
+    &:last-child {
+        margin-right: 0 !important;
+    }
+}

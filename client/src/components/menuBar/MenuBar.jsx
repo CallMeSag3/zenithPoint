@@ -4,23 +4,11 @@ import Search from "../../images/search.png"
 import Start from "../../images/start.svg"
 import X from "../../images/x.svg"
 import { useState } from "react";
-import Emoji from "../emoji/Emoji";
-import emojii from 'emoji-dictionary';
 
 export default function MenuBar() {
     const [menu, setMenu] = useState(false)
-    const [emoji, setEmoji] = useState("😂")
-    const emojis = {
-        "😂": "laughing emoji",
-        "😊": "cute emoji",
-        "😭": "crying emoji",
-        "🙃": "good mood emoji",
-        "😍": "in love emoji",
-        "😏": "curious emoji",
-        "🥱": "bored emoji",
-        "🤔": "phylosophical emoji",
-        "😖": "upset emoji "
-    }
+    const [emoji, setEmoji] = useState("inLaughter")
+    const emojis = ["inCrying", "inLove", "inGoodMood", "inIll", "inLaughter", "inNeutral", "inSadness", "inThinking", "inWoozy"]
 
     const stateMenu = () => {
         setMenu(!menu)
@@ -28,11 +16,8 @@ export default function MenuBar() {
     const changeEmoji = (emo) => {
         setEmoji(emo)
         stateMenu()
+        console.log(emo)
     }
-
-    function convertEmoji(em) {
-        return emojii.getUnicode(em);
-      }
 
     return (
         <div className="menu">
@@ -55,9 +40,7 @@ export default function MenuBar() {
                             </li>
                         ) : (
                             <li className="menu__filters-item" onClick={stateMenu}>
-                                <p className="menu__filters-emoji">{
-                                    <Emoji symbol={emoji} />
-                                }</p>
+                                <img src={require('../../images/' + emoji + '.svg')} alt="Emoji" className="menu__filters-emoji-img" />
                             </li>
                         )}
                         <li className="menu__filters-item">
@@ -69,8 +52,8 @@ export default function MenuBar() {
             {menu && <div className="menu__emojibar">
                 <ul className="menu__emojibar-list">
                     {emojis.map((emo) => (
-                        <li className="menu__emojibar-item" onClick={changeEmoji(emoji.getUnicode(emo))}>
-                            {emoji.getUnicode(emo)}
+                        <li key={emo} className="menu__emojibar-item">
+                            <img src={require('../../images/' + emo + '.svg')} alt="emoji" className="menu__emojibar-item-img" onClick={()=>changeEmoji(emo)} />
                         </li>
                     ))}
                 </ul>

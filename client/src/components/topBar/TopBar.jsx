@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Logo from '../../images/logo.png'
 import Avatar from '../../images/avatar.png'
 import Close from '../../images/x.svg'
+import About from "../../pages/about/About";
 
 export default function TopBar() {
     const [active, setActive] = React.useState(false);
@@ -22,12 +23,12 @@ export default function TopBar() {
                     </Link>
                     <ul className="topbar__menu-items">
                         <li className="topbar__menu-item">
-                            <Link to={Home} className="topbar__menu-item-link">
+                            <Link to={'/'} className="topbar__menu-item-link">
                                 Inicio
                             </Link>
                         </li>
                         <li className="topbar__menu-item">
-                            <Link to={Home} className="topbar__menu-item-link">
+                            <Link to={'/about'} className="topbar__menu-item-link">
                                 Sobre Nosotros
                             </Link>
                         </li>
@@ -36,7 +37,7 @@ export default function TopBar() {
                 <div className="topbar__menu-right">
                     <ul className="topbar__menu-items">
                         <li className="topbar__menu-item">
-                            <Link to={Home} className="topbar__menu-item-link">
+                            <Link to={"/"} className="topbar__menu-item-link">
                                 Configuraciones
                             </Link>
                         </li>
