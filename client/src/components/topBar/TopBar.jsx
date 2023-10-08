@@ -37,7 +37,7 @@ export default function TopBar() {
                 <div className="topbar__menu-right">
                     <ul className="topbar__menu-items">
                         <li className="topbar__menu-item">
-                            <Link to={"/"} className="topbar__menu-item-link">
+                            <Link to={"/settings"} className="topbar__menu-item-link">
                                 Configuraciones
                             </Link>
                         </li>
@@ -51,7 +51,7 @@ export default function TopBar() {
                     {active && (
                         <ul className="topbar__menu-dropdown">
                             <li className="topbar__menu-dropdown-list">
-                                <Link to={Home} className="topbar__menu-item-link">
+                                <Link to={"/login"} className="topbar__menu-item-link">
                                     Salir
                                 </Link>
                             </li>
